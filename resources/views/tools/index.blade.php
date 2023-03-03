@@ -21,7 +21,7 @@
             <p>{{$tool->category}}</p>
 
             {{-- LOGIC STARS VOTE --}}
-            <div>
+            <div class="text-warning">
                 @for($i = 1; $i <= $tool->vote; $i++)
                     <i class="fa-solid fa-star"></i>
                 @endfor

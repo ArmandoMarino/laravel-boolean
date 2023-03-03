@@ -78,6 +78,20 @@ class ToolController extends Controller
     public function update(Request $request, string $id)
     {
 
+        $request->validate([
+            'name' => 'required|string|unique:tools',
+            'thumb' => 'nullable|string',
+            'description' => 'nullable|string',
+            'category' => 'nullable|string',
+            'release_year' => 'nullable|string',
+            'download_link' => 'nullable|string',
+            'supported_os' => 'nullable|string',
+            'vote' => 'nullable|string',
+        ], [
+            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
+            'name.required' => 'The Name field is required!',
+        ]);
+
         // REQUEST PER CAMPI FORM come lo STORE
         $data = $request->all();
         $tool = Tool::findOrFail($id);
