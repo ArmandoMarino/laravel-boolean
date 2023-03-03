@@ -15,18 +15,18 @@
   </div>
  
 
-<section id="tool-show" class="d-flex justify-content-center">
+<section id="tool-show" class="d-flex justify-content-center text-white">
     <div class="col-12 col-md-10 col-lg-8">
-        <img class="img-fluid" src="{{ $tool->thumb }}" alt="{{ $tool->name }}">
+        <img class="img-fluid w-50" src="{{ $tool->thumb }}" alt="{{ $tool->name }}">
         <h2>{{ $tool->name }}</h2>
         <p>{{$tool->description }}</p>
         <ul>
-            <li>{{$tool->category }}</li>
-            <li>{{$tool->release_year }}</li>
-            <li>{{$tool->latest_version }}</li>
-            <li>{{$tool->download_link }}</li>
-            <li>{{$tool->supported_os }}</li>
-            <li>{{$tool->vote }}</li>
+            <li>Category : {{$tool->category }}</li>
+            <li>Release Year: {{$tool->release_year }}</li>
+            <li>Latest Version : {{$tool->latest_version }}</li>
+            <li>Download Link : {{$tool->download_link }}</li>
+            <li>Supported OS : {{$tool->supported_os }}</li>
+            <li>Vote : {{$tool->vote }}</li>
         </ul>
     </div>
 </section>
