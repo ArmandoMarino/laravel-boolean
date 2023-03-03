@@ -12,7 +12,7 @@ class ToolController extends Controller
      */
     public function index()
     {
-        $tools = Tool::orderBy('title', 'ASC')->get();
+        $tools = Tool::orderBy('name', 'ASC')->get();
         return view('tools.index', compact('tools'));
     }
 
