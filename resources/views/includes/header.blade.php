@@ -20,7 +20,7 @@
                     <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
-                    {{-- <a class="nav-link @if (Route::is('comics.index')) active @endif" href="{{ route('comics.index') }}">Comics</a> --}}
+                    <a class="nav-link @if (Route::is('tools.index')) active @endif" href="{{ route('tools.index') }}">Tools</a>
                 </li>
             </ul>
           </div>
