@@ -1,13 +1,4 @@
- {{-- SE CI SONO DEGLI ERRORI LI GESTIAMO CON UN IF --}}
- @if($errors->any())
- <div class="alert alert-danger">
-    <ul>
-     @foreach ($errors->all() as $error )
-         <li>{{$error}}</li>
-     @endforeach
-    </ul>
- </div>
-@endif
+@include ('includes.alert')
 
 @if($tool->exists)
 <form action="{{ route('tools.update', $tool->id) }}" method="POST" novalidate>

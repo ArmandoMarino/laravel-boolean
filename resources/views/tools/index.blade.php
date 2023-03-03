@@ -5,6 +5,8 @@
 
 @section('content')
 
+@include ('includes.alert')
+
 <section id="contents-space">
     {{-- CREATE BTN to tools.create e settatto il ComicController con il return della view --}}
     <a class="btn btn-primary m-3" href="{{ route('tools.create')}}">Add Tool</a>
@@ -19,6 +21,7 @@
             <p>{{ $tool->name }}</p>
             {{-- EDIT --}}
             <a class="btn btn-warning m-3" href="{{ route('tools.edit', $tool->id)}}">Edit</a>
+            {{-- DELETE --}}
             <form action="{{route('tools.destroy', $tool->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
