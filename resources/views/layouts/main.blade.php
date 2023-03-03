@@ -11,11 +11,11 @@
     @vite('resources/js/app.js')
 </head>
 <body>
- 
+    @include ('includes.header')
     <main>
         {{-- @include('includes.alert') --}}
         @yield('content')
-        
+
     </main>
 
     

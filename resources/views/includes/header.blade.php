@@ -7,7 +7,7 @@
     <nav class="navbar navbar-expand-lg bg-light">
         <figure id="logo-header">
             <a href="{{ route('home') }}">
-                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC_Logo">
+                {{-- <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Magazine_logo"> --}}
             </a>
         </figure>
         <div class="container-fluid">
@@ -17,7 +17,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li>
-                    {{-- <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route('home') }}">Home</a> --}}
+                    <a class="nav-link @if (Route::is('home')) active @endif" href="{{ route('home') }}">Home</a>
                 </li>
                 <li>
                     {{-- <a class="nav-link @if (Route::is('comics.index')) active @endif" href="{{ route('comics.index') }}">Comics</a> --}}
