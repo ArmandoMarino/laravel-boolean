@@ -19,6 +19,10 @@
                 <img class="img-fluid" src="{{ $tool->thumb }}" alt="{{ $tool->name }}">
             </a>
             <p>{{ $tool->name }}</p>
+            <p>{{$tool->category}}</p>
+            <p>{{$tool->vote}}</p>
+            <p>{{$tool->supported_os}}</p>
+
             {{-- EDIT --}}
             <a class="btn btn-warning m-3 w-100" href="{{ route('tools.edit', $tool->id)}}">Edit</a>
             {{-- DELETE --}}
