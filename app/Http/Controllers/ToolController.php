@@ -55,7 +55,16 @@ class ToolController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        // REQUEST PER CAMPI FORM come lo STORE
+        $data = $request->all();
+        $tool = Tool::findOrFail($id);
+
+        $tool->update($data);
+
+        return to_route('tools.show', $tool->id)
+            ->with('message', "Change made successfully")
+            ->with('type', 'success');
     }
 
     /**
