@@ -10,20 +10,20 @@
     <a class="btn btn-primary m-3" href="{{ route('tools.create')}}">Add Tool</a>
 
     <div class="row g-4 blackboard text-white">
-        @foreach ($tools as $Tool)
+        @foreach ($tools as $tool)
         <div class="col-12 col-md-6 col-lg-2 d-flex flex-column align-items-center justify-content-between">
             {{-- SHOW --}}
-            <a href="{{ route('tools.show', $Tool->id )}}">
-                <img class="img-fluid" src="{{ $Tool->thumb }}" alt="{{ $Tool->name }}">
+            <a href="{{ route('tools.show', $tool->id )}}">
+                <img class="img-fluid" src="{{ $tool->thumb }}" alt="{{ $tool->name }}">
             </a>
-            <p>{{ $Tool->name }}</p>
+            <p>{{ $tool->name }}</p>
             {{-- EDIT --}}
-            <a class="btn btn-warning m-3" href="{{ route('tools.edit', $Tool->id)}}">Edit</a>
-            {{-- <form action="{{route('tools.destroy', $Tool->id)}}" method="POST">
+            <a class="btn btn-warning m-3" href="{{ route('tools.edit', $tool->id)}}">Edit</a>
+            <form action="{{route('tools.destroy', $tool->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete Tool</button>
-            </form> --}}
+            </form>
         </div>
         
         @endforeach
