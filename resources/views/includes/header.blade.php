@@ -22,6 +22,9 @@
                 <li>
                     <a class="nav-link @if (Route::is('tools.index')) active @endif" href="{{ route('tools.index') }}">Tools</a>
                 </li>
+                <li>
+                  <a class="nav-link @if (Route::is('dashboard')) active @endif" href="{{ route('dashboard') }}">Dashboard</a>
+                </li>
             </ul>
           </div>
         </div>
