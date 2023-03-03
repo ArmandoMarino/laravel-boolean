@@ -18,8 +18,8 @@
             </a>
             <p>{{ $Tool->name }}</p>
             {{-- EDIT --}}
-            {{-- <a class="btn btn-warning m-3" href="{{ route('tools.edit', $Tool->id)}}">Edit</a>
-            <form action="{{route('tools.destroy', $Tool->id)}}" method="POST">
+            <a class="btn btn-warning m-3" href="{{ route('tools.edit', $Tool->id)}}">Edit</a>
+            {{-- <form action="{{route('tools.destroy', $Tool->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete Tool</button>
