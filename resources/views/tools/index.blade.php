@@ -13,9 +13,9 @@
         @foreach ($tools as $Tool)
         <div class="col-12 col-md-6 col-lg-2 d-flex flex-column align-items-center justify-content-between">
             {{-- SHOW --}}
-            {{-- <a href="{{ route('tools.show', $Tool->id )}}"></a> --}}
+            <a href="{{ route('tools.show', $Tool->id )}}">
                 <img class="img-fluid" src="{{ $Tool->thumb }}" alt="{{ $Tool->name }}">
-            
+            </a>
             <p>{{ $Tool->name }}</p>
             {{-- EDIT --}}
             {{-- <a class="btn btn-warning m-3" href="{{ route('tools.edit', $Tool->id)}}">Edit</a>
@@ -25,6 +25,7 @@
                 <button type="submit" class="btn btn-danger">Delete Tool</button>
             </form> --}}
         </div>
+        
         @endforeach
     </div>
 </section>
@@ -32,3 +33,5 @@
 
 
 @endsection
+
+
