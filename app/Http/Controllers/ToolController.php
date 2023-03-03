@@ -21,7 +21,9 @@ class ToolController extends Controller
      */
     public function create()
     {
-        //
+        // FAKE TOOL
+        $tool = new Tool();
+        return view('tools.create', compact('tool'));
     }
 
     /**
@@ -29,7 +31,27 @@ class ToolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|unique:tools',
+            'thumb' => 'nullable|string',
+            'description' => 'nullable|string',
+            'category' => 'nullable|string',
+            'release_year' => 'nullable|string',
+            'download_link' => 'nullable|string',
+            'supported_os' => 'nullable|string',
+            'vote' => 'nullable|string',
+        ], [
+            // PERSONALIZZAZIONE DEI MESSAGGI ERRORE
+            'name.required' => 'The Name field is required!',
+        ]);
+
+        $data = $request->all();
+        $tool = new Tool();
+
+        $tool->fill($data);
+        $tool->save();
+
+        return to_route('tools.show', $tool->id);
     }
 
     /**

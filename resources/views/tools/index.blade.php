@@ -7,7 +7,7 @@
 
 <section id="contents-space">
     {{-- CREATE BTN to tools.create e settatto il ComicController con il return della view --}}
-    {{-- <a class="btn btn-primary m-3" href="{{ route('comics.create')}}">Add Comic</a> --}}
+    <a class="btn btn-primary m-3" href="{{ route('tools.create')}}">Add Tool</a>
 
     <div class="row g-4 blackboard text-white">
         @foreach ($tools as $Tool)
