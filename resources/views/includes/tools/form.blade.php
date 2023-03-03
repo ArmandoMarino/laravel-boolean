@@ -26,7 +26,7 @@
         </div>
         
         {{-- THUMB --}}
-        <div class="col-6">
+        <div class="col-4">
             <div class="mb-3">
                 <label for="thumb" class="form-label">Tool Poster</label>
                 <input name="thumb" type="url" class="form-control" id="thumb" placeholder="Url of new tool Image" 
@@ -34,6 +34,11 @@
             </div>
         </div>
         
+        <div class="col-2">
+            <p>Preview Image :</p>
+            <img src="{{ old('thumb', $tool->thumb ?? 'https://picsum.photos/seed/picsum/536/354') }}" id="preview"
+                alt="preview" class="img-fluid">
+        </div>
 
         {{-- DESCRIPTION --}}
         <div class="col-6">
@@ -63,7 +68,7 @@
             </div>
         </div>
 
-        {{-- latest_version --}}
+        {{-- LATEST VERSION --}}
         <div class="col-6">
             <div class="mb-3">
                 <label for="latest_version" class="form-label">Tool latest_version</label>
@@ -82,7 +87,7 @@
             </div>
         </div>
 
-        {{-- supported_os --}}
+        {{-- SUPPORTED OS --}}
         <div class="col-6">
             <div class="mb-3">
                 <label for="supported_os" class="form-label">Tool supported OS</label>
@@ -107,3 +112,4 @@
         <button class="btn btn-success my-3" type="submit">Save</button>
     </div>
 </form>
+
