@@ -25,6 +25,15 @@
                 <li>
                   <a class="nav-link @if (Route::is('dashboard')) active @endif" href="{{ route('dashboard') }}">Dashboard</a>
                 </li>
+                <li>
+                  <a class="nav-link @if (Route::is('about')) active @endif" href="{{ route('about') }}">About us</a>
+                </li>
+                <li>
+                  <a class="nav-link @if (Route::is('contacts')) active @endif" href="{{ route('contacts') }}">Contact us</a>
+                </li>
+                <li>
+                  <a class="nav-link @if (Route::is('privacy')) active @endif" href="{{ route('privacy') }}">Privacy Policy</a>
+                </li>
             </ul>
           </div>
         </div>
