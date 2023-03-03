@@ -19,6 +19,7 @@
 
     </main>
 
+    @include ('includes.footer')
     
     @yield('scripts')
 

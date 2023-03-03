@@ -3,7 +3,7 @@
   $links = config('menu'); 
 @endphp
 
-<header>
+<header class="w-100">
     <nav class="navbar navbar-expand-lg bg-light">
         <figure id="logo-header">
             <a href="{{ route('home') }}">
