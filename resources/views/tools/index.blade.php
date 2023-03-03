@@ -2,7 +2,6 @@
 
 @section('title', 'TOOLS')
 
-
 @section('content')
 
 @include ('includes.alert')
@@ -20,7 +19,14 @@
             </a>
             <p>{{ $tool->name }}</p>
             <p>{{$tool->category}}</p>
-            <p>{{$tool->vote}}</p>
+
+            {{-- LOGIC STARS VOTE --}}
+            <div>
+                @for($i = 1; $i <= $tool->vote; $i++)
+                    <i class="fa-solid fa-star"></i>
+                @endfor
+            </div>
+
             <p>{{$tool->supported_os}}</p>
 
             {{-- EDIT --}}
@@ -41,4 +47,13 @@
 
 @endsection
 
+@section('scripts')
+<script>
+vote = getDocument
+</script>
+@endsection
 
+<div class="vote m-0">
+    <font-awesome-icon icon="fa-solid fa-star" v-for="i in fullStar" :key="i" class="text-warning" />
+    <font-awesome-icon icon="fa-solid fa-star" v-for="i in hollowStar" :key="i" />
+</div>
