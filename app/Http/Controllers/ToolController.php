@@ -94,6 +94,10 @@ class ToolController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $tool = Tool::findOrFail($id);
+        $tool->delete();
+        return to_route('tools.index')
+            ->with('message', "$tool->name successfully Deleted")
+            ->with('type', 'success');
     }
 }

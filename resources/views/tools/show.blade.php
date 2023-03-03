@@ -7,11 +7,11 @@
   <div class="d-flex justify-content-between">
     <a class="btn btn-primary px-4 m-3" href="{{ route('tools.index') }}">Back</a>
     <a class="btn btn-secondary px-4 m-3" href="{{ route('tools.edit', $tool->id) }}">Edit Tool</a>
-    {{-- <form action="{{route('tools.destroy', $tool->id)}}" method="POST">
+    <form action="{{route('tools.destroy', $tool->id)}}" method="POST">
         @csrf
         @method('DELETE')
-        <button type="submit" class="btn btn-danger m-3">Delete tool</button>
-    </form> --}}
+        <button type="submit" class="btn btn-danger m-3">Delete Tool</button>
+    </form>
   </div>
  
 
